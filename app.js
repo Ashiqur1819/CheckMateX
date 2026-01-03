@@ -25,10 +25,10 @@ io.on("connection", (uniqueSocket) => {
 
   if (!players.white) {
     players.white = uniqueSocket.id;
-    uniqueSocket.emmit("playerRole", "w");
+    uniqueSocket.emit("playerRole", "w");
   } else if (!players.black) {
     players.black = uniqueSocket.id;
-    uniqueSocket.emmit("playerRole", "b");
+    uniqueSocket.emit("playerRole", "b");
   } else {
     uniqueSocket("spectatorRole");
   }
